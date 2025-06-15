@@ -27,7 +27,7 @@ const Update = () => {
               id = decodedToken.sub; 
             }
             try {
-              const response = await fetch(`http://localhost:9000/api/updateInfo/${id}`,{
+              const response = await fetch(`https://smartech-production-1020.up.railway.app/api/updateInfo/${id}`,{
                 method:"PUT",
                 headers :{
                   Accept:'application/json',
