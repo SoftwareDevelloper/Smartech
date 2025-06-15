@@ -25,7 +25,7 @@ const ProfileSettings = () => {
                         id = decodedToken.sub; 
                         }
                         try {
-                            const response = await fetch(`http://localhost:9000/api/updateInfosAdmin/${id}`,{
+                            const response = await fetch(`https://smartech-production-1020.up.railway.app/api/updateInfosAdmin/${id}`,{
                                 method:"PUT",
                                 headers :{
                                 Accept:'application/json',
