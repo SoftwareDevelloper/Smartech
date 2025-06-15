@@ -23,7 +23,7 @@ const Drawer = () => {
       const decodedToken = jwtDecode(token);
       const id = decodedToken.sub;
       
-      const response = await fetch(`http://localhost:9000/api/updateActive/${id}`, {
+      const response = await fetch(`https://smartech-production-1020.up.railway.app/api/updateActive/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -62,7 +62,7 @@ const Drawer = () => {
       }
       const decodedToken = jwtDecode(token);
       id = decodedToken.sub;
-      const response = await fetch(`http://localhost:9000/api/delete/${id}`, {
+      const response = await fetch(`https://smartech-production-1020.up.railway.app/api/delete/${id}`, {
         method: "DELETE",
         headers: {
           Accept: "application/json",
