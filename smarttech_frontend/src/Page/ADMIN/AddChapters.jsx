@@ -47,7 +47,7 @@ const AddChapters = () => {
           if(video){
             let formDataforvideos = new FormData();
             formDataforvideos.append('video',video);
-            const videoUploadResponse = await fetch('http://localhost:9000/api/chapters/upload_video', {
+            const videoUploadResponse = await fetch('https://smartech-production-1020.up.railway.app/api/chapters/upload_video', {
               method: 'POST',
               body: formDataforvideos,
             });
