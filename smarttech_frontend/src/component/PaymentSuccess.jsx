@@ -28,7 +28,7 @@ useEffect(() => {
       });
 
       const response = await axios.post(
-        'http://localhost:9000/api/v1/confirm-payment',
+        'https://smartech-production-1020.up.railway.app/api/v1/confirm-payment',
         null,
         {
           params: { paymentIntentId, apprenantId: userId },
