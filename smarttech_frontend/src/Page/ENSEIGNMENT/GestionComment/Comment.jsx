@@ -22,14 +22,14 @@ const Comment = () => {
   const fetchComments = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:9000/api/v2/approveComment");
+      const response = await fetch("https://smartech-production-1020.up.railway.app/api/v2/approveComment");
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
       
       const commentsData = await response.json();
       const commentsWithAuthors = await Promise.all(
         commentsData.map(async comment => {
           try {
-            const nameResponse = await fetch(`http://localhost:9000/api/v2/GetNameApprenant/${comment.id}`);
+            const nameResponse = await fetch(`https://smartech-production-1020.up.railway.app/api/v2/GetNameApprenant/${comment.id}`);
             const fullname = nameResponse.ok ? await nameResponse.text() : 'Anonymous';
             return { ...comment, fullname };
           } catch (error) {
@@ -54,7 +54,7 @@ const Comment = () => {
     try {
       const repliesData = await Promise.all(
         commentIds.map(async id => {
-          const response = await fetch(`http://localhost:9000/api/v2/replies/comment/${id}`);
+          const response = await fetch(`https://smartech-production-1020.up.railway.app/api/v2/replies/comment/${id}`);
           if (!response.ok) return [];
           
           const replies = await response.json();
@@ -96,7 +96,7 @@ const Comment = () => {
       const decodedToken = jwtDecode(token);
       const authorId = decodedToken.sub;
       
-      const response = await fetch(`http://localhost:9000/api/v2/replies/${commentId}/${authorId}`, {
+      const response = await fetch(`https://smartech-production-1020.up.railway.app/api/v2/replies/${commentId}/${authorId}`, {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
@@ -113,7 +113,7 @@ const Comment = () => {
       }
   
       // Refresh replies for this comment
-      const updatedReplies = await fetch(`http://localhost:9000/api/v2/replies/comment/${commentId}`, {
+      const updatedReplies = await fetch(`https://smartech-production-1020.up.railway.app/api/v2/replies/comment/${commentId}`, {
         headers: {
           "Authorization": `Bearer ${token}`
         }
