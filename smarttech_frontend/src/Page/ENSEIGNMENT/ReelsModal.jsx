@@ -28,7 +28,7 @@ const ReelsModal = ({ closeModal }) => {
       const formData = new FormData();
       formData.append('video', videoFile);
 
-      const uploadResponse = await fetch('http://localhost:9000/api/upload_reel', {
+      const uploadResponse = await fetch('https://smartech-production-1020.up.railway.app/api/upload_reel', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('auth-token')}`
@@ -48,7 +48,7 @@ const ReelsModal = ({ closeModal }) => {
         description: description
       };
 
-      const createResponse = await fetch(`http://localhost:9000/api/uploadReel/${teacherId}`, {
+      const createResponse = await fetch(`https://smartech-production-1020.up.railway.app/api/uploadReel/${teacherId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
