@@ -63,7 +63,7 @@ public class FormationsControlleur {
 
         try {
             String imageUrl = imageUploadService.uploadImage(file);
-            return ResponseEntity.ok(Map.of("imageUrl", "http://localhost:9000" + imageUrl));
+            return ResponseEntity.ok(Map.of("imageUrl", "https://smartech-production-1020.up.railway.app" + imageUrl));
         } catch (Exception e) {
             return ResponseEntity.internalServerError().body(Map.of("error", "File upload failed: " + e.getMessage()));
         }
