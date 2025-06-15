@@ -32,9 +32,9 @@ const ProfileEnsPrivate = () => {
       try {
         setIsLoading(true);
         const [userRes, postsRes, reelsRes] = await Promise.all([
-          fetch(`http://localhost:9000/api/user/${teacherId}`),
-          fetch(`http://localhost:9000/api/Post/${teacherId}`),
-          fetch(`http://localhost:9000/api/Reel/${teacherId}`)
+          fetch(`https://smartech-production-1020.up.railway.app/api/user/${teacherId}`),
+          fetch(`https://smartech-production-1020.up.railway.app/api/Post/${teacherId}`),
+          fetch(`https://smartech-production-1020.up.railway.app/api/Reel/${teacherId}`)
         ]);
         
         const [userData, postsData, reelsData] = await Promise.all([
