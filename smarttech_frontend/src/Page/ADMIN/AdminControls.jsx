@@ -14,12 +14,12 @@ const AdminControls = () => {
   }, []);
 
   const fetchUsers = async () => {
-    const response = await fetch('http://localhost:9000/api/apprenant');
+    const response = await fetch('https://smartech-production-1020.up.railway.app/api/apprenant');
     setUsers(await response.json());
   };
 
   const fetchChapters = async () => {
-    const response = await fetch('http://localhost:9000/api/chapters/Chapters');
+    const response = await fetch('https://smartech-production-1020.up.railway.app/api/chapters/Chapters');
     setChapters(await response.json());
   };
 
@@ -30,7 +30,7 @@ const AdminControls = () => {
       }
       
       const response = await fetch(
-        `http://localhost:9000/api/chapter-progress/unlock-chapter?userId=${selectedUser}&chapterId=${selectedChapter}`,
+        `https://smartech-production-1020.up.railway.app/api/chapter-progress/unlock-chapter?userId=${selectedUser}&chapterId=${selectedChapter}`,
         {
           method: 'POST',
           headers: {
