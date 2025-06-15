@@ -22,7 +22,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @RestController
-@CrossOrigin(origins ="*",methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE,RequestMethod.PUT})
+@CrossOrigin(origins ="https://smartech-production-e572.up.railway.app",methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE,RequestMethod.PUT})
 @RequestMapping("/api/v1")
 public class PaymentController {
     @Autowired
