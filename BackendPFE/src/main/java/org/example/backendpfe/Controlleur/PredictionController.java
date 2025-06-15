@@ -19,7 +19,7 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin(
-        origins = {"http://localhost:3000", "http://localhost:3001", "http://localhost:9000"},
+        origins = {"*"},
         methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE, RequestMethod.PUT}
 )
 @RequestMapping("/api/predictLevel")
