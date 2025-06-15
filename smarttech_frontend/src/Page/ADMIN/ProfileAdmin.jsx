@@ -8,7 +8,7 @@ const ProfileAdmin = () => {
         const [imagePreview, setImagePreview] = useState(AdminProfile);
       
       useEffect(() => {
-        fetch(`http://localhost:9000/api/user/${userId}`)
+        fetch(`https://smartech-production-1020.up.railway.app/api/user/${userId}`)
           .then((response) => response.json())
           .then((data) => {
             setAdmin(data);
