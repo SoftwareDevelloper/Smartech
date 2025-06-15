@@ -9,7 +9,7 @@ import org.springframework.mail.MailSender;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(origins ="*",methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE,RequestMethod.PUT})
+@CrossOrigin(origins ="https://smartech-production-e572.up.railway.app",methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE,RequestMethod.PUT})
 @RequestMapping("/contact")
 public class MailControllleur
 {
