@@ -195,7 +195,7 @@ const approveCourse = (id) => {
 };
 //Approve Users
 const approveUser = (id) => {
-  fetch(`http://localhost:9000/api/approve/${id}`, {
+  fetch(`https://smartech-production-1020.up.railway.app/api/approve/${id}`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
