@@ -43,7 +43,7 @@ const AddCourse = () => {
                     let formDataForImage = new FormData();
                     formDataForImage.append('file', image); 
               
-                    const imageUploadResponse = await fetch('http://localhost:9000/api/upload-image', {
+                    const imageUploadResponse = await fetch('https://smartech-production-1020.up.railway.app/api/upload-image', {
                       method: 'POST',
                       body: formDataForImage,
                     });
@@ -58,7 +58,7 @@ const AddCourse = () => {
                       throw new Error('Failed to upload image');
                     }
                   }
-                    const courseResponse = await fetch("http://localhost:9000/api/AddFormations", {
+                    const courseResponse = await fetch("https://smartech-production-1020.up.railway.app/api/AddFormations", {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json',
