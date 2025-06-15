@@ -43,7 +43,7 @@ const AddNewcourse = () => {
                     let formDataForImage = new FormData();
                     formDataForImage.append('file', image); 
               
-                    const imageUploadResponse = await fetch('http://localhost:9000/api/upload-image', {
+                    const imageUploadResponse = await fetch('https://smartech-production-1020.up.railway.app/api/upload-image', {
                       method: 'POST',
                       body: formDataForImage,
                     });
@@ -62,7 +62,7 @@ const AddNewcourse = () => {
                     let enseignantId=''
                     const decodedToken = jwtDecode(token);
                     enseignantId = decodedToken.sub; 
-                    const courseResponse = await fetch(`http://localhost:9000/api/AddFormationsByENS/${enseignantId}`, {
+                    const courseResponse = await fetch(`https://smartech-production-1020.up.railway.app/api/AddFormationsByENS/${enseignantId}`, {
 
                     method: 'POST',
                     headers: {
