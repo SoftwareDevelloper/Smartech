@@ -19,7 +19,7 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin(
-        origins = {"*"},
+        origins = {"https://smartech-production-e572.up.railway.app"},
         methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE, RequestMethod.PUT}
 )
 @RequestMapping("/api/predictLevel")
