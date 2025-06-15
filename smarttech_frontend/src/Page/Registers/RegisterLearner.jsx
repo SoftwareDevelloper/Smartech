@@ -64,7 +64,7 @@ const RegisterLearner = () => {
               filteredData.specialitee = specialitee;
             }
 
-      const response = await fetch('http://localhost:9000/api/Register' ,{
+      const response = await fetch('https://smartech-production-1020.up.railway.app/api/Register' ,{
         method:"POST",
         headers :{
           Accept:'application/json',
