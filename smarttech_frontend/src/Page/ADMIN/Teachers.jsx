@@ -40,7 +40,7 @@ const Enseignant = () => {
       
           console.log('sign up function executed : ' , formData)
           try{
-          const response = await fetch('http://localhost:9000/api/AddTeacher' ,{
+          const response = await fetch('https://smartech-production-1020.up.railway.app/api/AddTeacher' ,{
             method:"POST",
             headers :{
               Accept:'application/json',
