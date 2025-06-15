@@ -46,8 +46,8 @@ const Formations = () => {
     
         try {
           const url = selectedCategory 
-            ? `http://localhost:9000/api/GetCourse/${selectedCategory}?lang=${currentLanguage}`
-            : `http://localhost:9000/api/GetAllFormations/${status}?lang=${currentLanguage}`;    
+            ? `https://smartech-production-1020.up.railway.app/api/GetCourse/${selectedCategory}?lang=${currentLanguage}`
+            : `https://smartech-production-1020.up.railway.app/api/GetAllFormations/${status}?lang=${currentLanguage}`;    
           const response = await fetch(url);
           const data = await response.json();
           
@@ -77,8 +77,8 @@ const Formations = () => {
     
         try {
           const url = selectedTitle
-            ? `http://localhost:9000/api/GetCourseByTitle/${selectedTitle}?lang=${currentLanguage}`
-            : `http://localhost:9000/api/GetAllFormations/${status}?lang=${currentLanguage}`;    
+            ? `https://smartech-production-1020.up.railway.app/api/GetCourseByTitle/${selectedTitle}?lang=${currentLanguage}`
+            : `https://smartech-production-1020.up.railway.app/api/GetAllFormations/${status}?lang=${currentLanguage}`;    
           const response = await fetch(url);
           const data = await response.json();
           
@@ -113,7 +113,7 @@ const Formations = () => {
     useEffect(()=>{window.document.dir = i18n.dir();},[currentLanguage])
     const toggleModal = () => {setIsModalOpen(!isModalOpen); };
     const markAsCompleted = (id) => {
-      fetch(`http://localhost:9000/api/formations/${id}/complete`, {
+      fetch(`https://smartech-production-1020.up.railway.app/api/formations/${id}/complete`, {
         method: "PUT",
       })
         .then((res) => {
@@ -127,7 +127,7 @@ const Formations = () => {
         const decodedToken = jwtDecode(token);
         status = decodedToken.status || true;
       }
-      fetch(`http://localhost:9000/api/GetAllFormations/${status}?lang=${currentLanguage}`)
+      fetch(`https://smartech-production-1020.up.railway.app/api/GetAllFormations/${status}?lang=${currentLanguage}`)
       .then(response => response.json())
       .then(data => {
         console.log('Fetched course:', data);
@@ -147,7 +147,7 @@ const Formations = () => {
       setAllcourse((prev)=> prev.filter((course)=>course.id !== id));
       if(localStorage.getItem("auth-token"))
         {
-          fetch(`http://localhost:9000/api/DeleteFormations/${id}`,{
+          fetch(`https://smartech-production-1020.up.railway.app/api/DeleteFormations/${id}`,{
             method:"DELETE",
             headers :{
                 Accept : 'application/json',
@@ -168,7 +168,7 @@ const Formations = () => {
       console.error("enseignant must be selected.");
       return;
     }
-    fetch(`http://localhost:9000/api/assignFormationToTeacher/${enseignant_id}/${formation_id}`, {
+    fetch(`https://smartech-production-1020.up.railway.app/api/assignFormationToTeacher/${enseignant_id}/${formation_id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -185,7 +185,7 @@ const Formations = () => {
       });
   };
   useEffect(() => {
-    fetch("http://localhost:9000/api/enseignant")
+    fetch("https://smartech-production-1020.up.railway.app/api/enseignant")
       .then(response => response.json())
       .then(data => {
         console.log('Fetched enseignants:', data);
@@ -224,7 +224,7 @@ const Formations = () => {
       if(pdfCoursFile){
         let formDataforfilecours = new FormData();
       formDataforfilecours.append('pdf',pdfCoursFile);
-      const filecoursUploadResponse = await fetch('http://localhost:9000/api/upload_files', {
+      const filecoursUploadResponse = await fetch('https://smartech-production-1020.up.railway.app/api/upload_files', {
         method: 'POST',
         body: formDataforfilecours,
       });
@@ -245,7 +245,7 @@ const Formations = () => {
       if(pdfTDFile){
         let formDataforfiletd = new FormData();
         formDataforfiletd.append('pdf',pdfTDFile);
-        const filetdUploadResponse = await fetch('http://localhost:9000/api/upload_files', {
+        const filetdUploadResponse = await fetch('https://smartech-production-1020.up.railway.app/api/upload_files', {
          method: 'POST',
          body: formDataforfiletd,
         });
@@ -266,7 +266,7 @@ const Formations = () => {
       if(pdfTest){
         let formDataforfiletest = new FormData();
       formDataforfiletest.append('pdf',pdfCoursFile);
-      const filetestUploadResponse = await fetch('http://localhost:9000/api/upload_files', {
+      const filetestUploadResponse = await fetch('https://smartech-production-1020.up.railway.app/api/upload_files', {
         method: 'POST',
         body: formDataforfiletest,
       });
@@ -289,7 +289,7 @@ const Formations = () => {
         let formDataForImage = new FormData();
         formDataForImage.append('file', image); 
   
-        const imageUploadResponse = await fetch('http://localhost:9000/api/upload-image', {
+        const imageUploadResponse = await fetch('https://smartech-production-1020.up.railway.app/api/upload-image', {
           method: 'POST',
           body: formDataForImage,
         });
@@ -307,7 +307,7 @@ const Formations = () => {
           throw new Error('Failed to upload image');
         }
       }
-      const response = await fetch(`http://localhost:9000/api/UpdateFormation/${selectedCours.id}`, {
+      const response = await fetch(`https://smartech-production-1020.up.railway.app/api/UpdateFormation/${selectedCours.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
