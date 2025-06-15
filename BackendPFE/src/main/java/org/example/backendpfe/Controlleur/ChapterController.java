@@ -56,7 +56,7 @@ public class ChapterController {
         }
         try {
             String videoUrl = videoUploadService.uploadVideo(file);
-            return ResponseEntity.ok(Map.of("videoUrl", "http://localhost:9000" + videoUrl));
+            return ResponseEntity.ok(Map.of("videoUrl", "https://smartech-production-1020.up.railway.app" + videoUrl));
         } catch (Exception e) {
             return ResponseEntity.internalServerError().body(Map.of("error", "File upload failed: " + e.getMessage()));
         }
