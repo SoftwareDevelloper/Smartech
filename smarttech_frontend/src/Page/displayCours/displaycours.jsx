@@ -28,7 +28,7 @@ const PaymentModal = ({ chapter, onClose, onSuccess }) => {
   
     try {
       // 1. Create payment intent
-      const response = await fetch('http://localhost:9000/api/v1/Checkout', {
+      const response = await fetch('https://smartech-production-1020.up.railway.app/api/v1/Checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
@@ -133,7 +133,7 @@ const Displaycours = () => {
     const [progressRate, setProgressRate] = useState(0);
         useEffect(() => {
           // Fetch chapters
-          fetch(`http://localhost:9000/api/chapters/formation/${id}`)
+          fetch(`https://smartech-production-1020.up.railway.app/api/chapters/formation/${id}`)
             .then(response => response.json())
             .then(data => {
               const sortedChapters = data.sort((a, b) => a.chapterOrder - b.chapterOrder);
@@ -153,7 +153,7 @@ const Displaycours = () => {
         }, [id]);
         const handleDownloadCours = async (chapterId) => {
           try {
-            const response = await fetch(`http://localhost:9000/api/chapters/download-cours/${chapterId}`, {
+            const response = await fetch(`https://smartech-production-1020.up.railway.app/api/chapters/download-cours/${chapterId}`, {
               headers: {
                 'Content-Type': 'application/json',
               }
@@ -177,7 +177,7 @@ const Displaycours = () => {
         
         const handleDownloadTD = async (chapterId) => {
           try {
-            const response = await fetch(`http://localhost:9000/api/chapters/download-td/${chapterId}`, {
+            const response = await fetch(`https://smartech-production-1020.up.railway.app/api/chapters/download-td/${chapterId}`, {
               headers: {
                 'Content-Type': 'application/json',
               }
@@ -209,7 +209,7 @@ const Displaycours = () => {
             const token = localStorage.getItem('auth-token');
             const userId = jwtDecode(token).sub;
             
-            const response = await fetch(`http://localhost:9000/api/chapter-progress/complete?userId=${userId}&chapterId=${chapterId}`, {
+            const response = await fetch(`https://smartech-production-1020.up.railway.app/api/chapter-progress/complete?userId=${userId}&chapterId=${chapterId}`, {
               method: 'POST'
             });
             if (response.ok) {
@@ -236,7 +236,7 @@ const Displaycours = () => {
         
             // Call backend to unlock chapter
             const response = await fetch(
-              `http://localhost:9000/api/chapter-progress/unlock-chapter?userId=${userId}&chapterId=${chapterId}`,
+              `https://smartech-production-1020.up.railway.app/api/chapter-progress/unlock-chapter?userId=${userId}&chapterId=${chapterId}`,
               {
                 method: 'POST',
                 headers: {
@@ -300,7 +300,7 @@ const Displaycours = () => {
                   rating: parseFloat(formData.rating) // Convert to number
               };
       
-              const response = await fetch(`http://localhost:9000/api/v2/Comment/${user_id}/${id}`, {
+              const response = await fetch(`https://smartech-production-1020.up.railway.app/api/v2/Comment/${user_id}/${id}`, {
                   method: "POST",
                   headers: {
                       'Content-Type': 'application/json',
@@ -334,7 +334,7 @@ const Displaycours = () => {
 
         const fetchComments = async () => {
           try {
-              const response = await fetch(`http://localhost:9000/api/v2/approved-comments/${id}`);
+              const response = await fetch(`https://smartech-production-1020.up.railway.app/api/v2/approved-comments/${id}`);
               
               if (!response.ok) {
                   throw new Error(`Failed to load comments: ${response.status}`);
@@ -347,7 +347,7 @@ const Displaycours = () => {
                   data.map(async (comment) => {
                       try {
                           const fullnameResponse = await fetch(
-                              `http://localhost:9000/api/v2/GetNameApprenant/${comment.id}`
+                              `https://smartech-production-1020.up.railway.app/api/v2/GetNameApprenant/${comment.id}`
                           );
                           
                           if (!fullnameResponse.ok) {
