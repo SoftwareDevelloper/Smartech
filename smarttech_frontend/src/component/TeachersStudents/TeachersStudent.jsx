@@ -31,7 +31,7 @@ const TeachersStudent = () => {
         enseignantId = decodedToken.sub;
       }
   
-      const response = await fetch(`http://localhost:9000/api/AllUser/${enseignantId}`);
+      const response = await fetch(`https://smartech-production-1020.up.railway.app/api/AllUser/${enseignantId}`);
       const data = await response.json();
   
       setAllStudent(data);
