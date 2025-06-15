@@ -17,8 +17,8 @@ useEffect(() => {
       try {
         setLoading(true);
         const endpoint = filter === 'pending' 
-          ? 'http://localhost:9000/api/v2/pending' 
-          : 'http://localhost:9000/api/v2/approveComment';
+          ? 'https://smartech-production-1020.up.railway.app/api/v2/pending' 
+          : 'https://smartech-production-1020.up.railway.app/api/v2/approveComment';
         
         // Use axios consistently for all requests
         const response = await axios.get(endpoint);
@@ -31,7 +31,7 @@ useEffect(() => {
           
               try {
                 const fullnameResponse = await axios.get(
-                  `http://localhost:9000/api/v2/GetNameApprenant/${comment.id}`
+                  `https://smartech-production-1020.up.railway.app/api/v2/GetNameApprenant/${comment.id}`
                 );
                 fullname = fullnameResponse.data || 'User';
               } catch (error) {
@@ -40,7 +40,7 @@ useEffect(() => {
           
               try {
                 const formationResponse = await axios.get(
-                  `http://localhost:9000/api/v2/formation/${comment.id}`
+                  `https://smartech-production-1020.up.railway.app/api/v2/formation/${comment.id}`
                 );
                 formation = formationResponse.data || null;
               } catch (error) {
@@ -114,7 +114,7 @@ useEffect(() => {
     // Approve comment
     const approveComment = async (commentId) => {
       try {
-        await axios.put(`http://localhost:9000/api/v2/${commentId}/approve`);
+        await axios.put(`https://smartech-production-1020.up.railway.app/api/v2/${commentId}/approve`);
         setComments(comments.map(comment => 
           comment.id === commentId 
             ? { ...comment, status: 'APPROVED' } 
@@ -129,7 +129,7 @@ useEffect(() => {
     // Reject comment
     const rejectComment = async (commentId) => {
       try {
-        await axios.put(`http://localhost:9000/api/v2/${commentId}/reject`);
+        await axios.put(`https://smartech-production-1020.up.railway.app/api/v2/${commentId}/reject`);
         setComments(comments.map(comment => 
           comment.id === commentId 
             ? { ...comment, status: 'REJECTED' } 
@@ -145,7 +145,7 @@ useEffect(() => {
     const bulkApprove = async () => {
       try {
         await Promise.all(selected.map(id => 
-          axios.put(`http://localhost:9000/api/v2/${id}/approve`)
+          axios.put(`https://smartech-production-1020.up.railway.app/api/v2/${id}/approve`)
         ));
         setComments(comments.map(comment => 
           selected.includes(comment.id) 
@@ -163,7 +163,7 @@ useEffect(() => {
     const bulkReject = async () => {
       try {
         await Promise.all(selected.map(id => 
-          axios.put(`http://localhost:9000/api/v2/${id}/reject`)
+          axios.put(`https://smartech-production-1020.up.railway.app/api/v2/${id}/reject`)
         ));
         setComments(comments.map(comment => 
           selected.includes(comment.id) 
