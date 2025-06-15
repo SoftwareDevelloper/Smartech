@@ -38,7 +38,7 @@ export const CartProvider = ({ children }) => {
 
   const getCartItems = async () => {
     try {
-      const response = await axios.get(`http://localhost:9000/api/cart/${apprenantId}`, config);
+      const response = await axios.get(`https://smartech-production-1020.up.railway.app/api/cart/${apprenantId}`, config);
       setCartItems(response.data);
     } catch (error) {
       console.error('❌ Failed to fetch cart items:', error);
@@ -48,7 +48,7 @@ export const CartProvider = ({ children }) => {
   const addToCart = async (formation) => {
     try {
       await axios.post(
-        `http://localhost:9000/api/cart/add?apprenantId=${apprenantId}&formationId=${formation.id}`,
+        `https://smartech-production-1020.up.railway.app/api/cart/add?apprenantId=${apprenantId}&formationId=${formation.id}`,
         {},
         config
       );
@@ -62,7 +62,7 @@ export const CartProvider = ({ children }) => {
 
   const removeFromCart = async (itemId) => {
     try {
-      await axios.delete(`http://localhost:9000/api/cart/remove/${itemId}`, config);
+      await axios.delete(`https://smartech-production-1020.up.railway.app/api/cart/remove/${itemId}`, config);
       toast.success(t('CourseRemoved'));
       getCartItems();
     } catch (error) {
@@ -72,7 +72,7 @@ export const CartProvider = ({ children }) => {
 
   const clearCart = async () => {
     try {
-      await axios.delete(`http://localhost:9000/api/cart/clear/${apprenantId}`, config);
+      await axios.delete(`https://smartech-production-1020.up.railway.app/api/cart/clear/${apprenantId}`, config);
       setCartItems([]);
       toast.success(t('cartCleared'));
     } catch (error) {
