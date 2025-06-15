@@ -36,7 +36,7 @@ const CreateChapters = () => {
   useEffect(() => {
     const fetchFormations = async () => {
       try {
-        const response = await fetch('http://localhost:9000/api/GetAllFormations');
+        const response = await fetch('https://smartech-production-1020.up.railway.app/api/GetAllFormations');
         const data = await response.json();
         setFormations(data);
         if (data.length > 0) setSelectedFormationId(data[0].id);
@@ -82,7 +82,7 @@ const CreateChapters = () => {
       if (video) {
         let formDataForVideos = new FormData();
         formDataForVideos.append('video', video);
-        const videoUploadResponse = await fetch('http://localhost:9000/api/chapters/upload_video', {
+        const videoUploadResponse = await fetch('https://smartech-production-1020.up.railway.app/api/chapters/upload_video', {
           method: 'POST',
           body: formDataForVideos,
         });
@@ -99,7 +99,7 @@ const CreateChapters = () => {
       if (pdfCoursFile) {
         const coursFormData = new FormData();
         coursFormData.append('pdf', pdfCoursFile);
-        const coursResponse = await fetch('http://localhost:9000/api/chapters/upload_files', {
+        const coursResponse = await fetch('https://smartech-production-1020.up.railway.app/api/chapters/upload_files', {
           method: 'POST',
           body: coursFormData,
         });
@@ -114,7 +114,7 @@ const CreateChapters = () => {
       if (pdfTDFile) {
         const tdFormData = new FormData();
         tdFormData.append('pdf', pdfTDFile);
-        const tdResponse = await fetch('http://localhost:9000/api/chapters/upload_files', {
+        const tdResponse = await fetch('https://smartech-production-1020.up.railway.app/api/chapters/upload_files', {
           method: 'POST',
           body: tdFormData,
         });
@@ -126,7 +126,7 @@ const CreateChapters = () => {
       }
       
       // Send the chapter data to create endpoint
-      const response = await fetch("http://localhost:9000/api/chapters/create", {
+      const response = await fetch("https://smartech-production-1020.up.railway.app/api/chapters/create", {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
