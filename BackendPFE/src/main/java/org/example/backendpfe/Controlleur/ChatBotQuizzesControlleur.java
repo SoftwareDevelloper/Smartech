@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("Api/quiz")
-@CrossOrigin(origins = "http://localhost:3000,http://localhost:3001",methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE,RequestMethod.PUT})
+@CrossOrigin(origins = "https://smartech-production-e572.up.railway.app",methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE,RequestMethod.PUT})
 public class ChatBotQuizzesControlleur
 {
     @Autowired
