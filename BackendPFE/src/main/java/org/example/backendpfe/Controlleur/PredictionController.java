@@ -18,10 +18,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(
-        origins = {"https://smartech-production-e572.up.railway.app"},
-        methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE, RequestMethod.PUT}
-)
+@CrossOrigin(origins ="https://smartech-production-e572.up.railway.app",methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE,RequestMethod.PUT})
 @RequestMapping("/api/predictLevel")
 public class PredictionController {
     private final MLPredictionService predictionService;
