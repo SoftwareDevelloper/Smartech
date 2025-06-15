@@ -13,8 +13,8 @@ const { t } = useTranslation();
   const fetchUsers = async () => {
     try {
       const endpoint = viewMode === 'enrolled' 
-        ? 'http://localhost:9000/api/admin/enrolled-users'
-        : 'http://localhost:9000/api/admin/paid-users';
+        ? 'https://smartech-production-1020.up.railway.app/api/admin/enrolled-users'
+        : 'https://smartech-production-1020.up.railway.app/api/admin/paid-users';
       
       const response = await fetch(endpoint, {
         headers: {
