@@ -65,7 +65,7 @@ const AddChapters = () => {
           if (pdfCoursFile) {
             const coursFormData = new FormData();
             coursFormData.append('pdf', pdfCoursFile);
-            const coursResponse = await fetch('http://localhost:9000/api/chapters/upload_files', {
+            const coursResponse = await fetch('https://smartech-production-1020.up.railway.app/api/chapters/upload_files', {
               method: 'POST',
               body: coursFormData,
             });
@@ -80,7 +80,7 @@ const AddChapters = () => {
           if (pdfTDFile) {
             const tdFormData = new FormData();
             tdFormData.append('pdf', pdfTDFile);
-            const tdResponse = await fetch('http://localhost:9000/api/chapters/upload_files', {
+            const tdResponse = await fetch('https://smartech-production-1020.up.railway.app/api/chapters/upload_files', {
               method: 'POST',
               body: tdFormData,
             });
@@ -91,7 +91,7 @@ const AddChapters = () => {
             chapter.pdfTD = tdData.savedFileName; // Use correct field from response
           }
           
-          const courseResponse = await fetch(`http://localhost:9000/api/chapters/Addchapters/${formationId}`, {
+          const courseResponse = await fetch(`https://smartech-production-1020.up.railway.app/api/chapters/Addchapters/${formationId}`, {
             
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
