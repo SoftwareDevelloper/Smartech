@@ -31,7 +31,7 @@ const Users = () => {
       console.log("email:", emailaddress);
       console.log("status:", status);
     }
-    fetch(`http://localhost:9000/api/allUser/${status}`)
+    fetch(`https://smartech-production-1020.up.railway.app/api/allUser/${status}`)
       .then(response => response.json())
       .then(data => {
         console.log('Fetched users:', data);
@@ -44,7 +44,7 @@ const Users = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:9000/api/enseignant")
+    fetch("https://smartech-production-1020.up.railway.app/api/enseignant")
       .then(response => response.json())
       .then(data => {
         console.log('Fetched enseignants:', data);
@@ -57,7 +57,7 @@ const Users = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:9000/api/apprenant")
+    fetch("https://smartech-production-1020.up.railway.app/api/apprenant")
       .then(response => response.json())
       .then(data => {
         console.log('Fetched apprenants:', data);
@@ -72,7 +72,7 @@ const Users = () => {
   const RemoveUsers = async (id) => {
     setAllUser((prev) => prev.filter((user) => user.id !== id));
     if (localStorage.getItem("auth-token")) {
-      fetch(`http://localhost:9000/api/delete/${id}`, {
+      fetch(`https://smartech-production-1020.up.railway.app/api/delete/${id}`, {
         method: "DELETE",
         headers: {
           Accept: 'application/json',
@@ -95,7 +95,7 @@ const Users = () => {
       return;
     }
 
-    fetch(`http://localhost:9000/api/assignEnseignant/${apprenantId}/${enseignantId}`, {
+    fetch(`https://smartech-production-1020.up.railway.app/api/assignEnseignant/${apprenantId}/${enseignantId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
