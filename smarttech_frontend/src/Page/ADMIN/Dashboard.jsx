@@ -33,7 +33,7 @@ const Dashboard = () => {
   });
 
 useEffect(() => {
-  fetch('http://localhost:9000/api/formations-with-enrollments')
+  fetch('https://smartech-production-1020.up.railway.app/api/formations-with-enrollments')
     .then(response => response.json())
     .then(data => {
       setEnrollmentData(data);
@@ -45,7 +45,7 @@ useEffect(() => {
   },[currentLanguage])
   const TotalUsers = async () => {
     try {
-      const response = await fetch('http://localhost:9000/api/TotalUsers', {
+      const response = await fetch('https://smartech-production-1020.up.railway.app/api/TotalUsers', {
         method: 'GET',
         headers: {
           Accept: 'application/json',
@@ -65,7 +65,7 @@ useEffect(() => {
 
   const fetchEarnings = async () => {
     try {
-      const response = await fetch('http://localhost:9000/api/v1/total-earnings', {
+      const response = await fetch('https://smartech-production-1020.up.railway.app/api/v1/total-earnings', {
         method: 'GET',
         headers: {
           Accept: 'application/json',
@@ -86,7 +86,7 @@ useEffect(() => {
   }, []);
   const TotalApprovalsPending = async () => {
     try {
-      const response = await fetch('http://localhost:9000/api/TotalPendingApprovals', {
+      const response = await fetch('https://smartech-production-1020.up.railway.app/api/TotalPendingApprovals', {
         method: 'GET',
         headers: {
           Accept: 'application/json',
@@ -106,7 +106,7 @@ useEffect(() => {
 
   const TotalCourse = async () => {
     try {
-      const response = await fetch('http://localhost:9000/api/TotalCourse', {
+      const response = await fetch('https://smartech-production-1020.up.railway.app/api/TotalCourse', {
         method: 'GET',
         headers: {
           Accept: 'application/json',
@@ -136,7 +136,7 @@ useEffect(() => {
     console.log("email:", emailaddress);
     console.log("status:",status);
   }
-  fetch(`http://localhost:9000/api/allUser/${status}`)
+  fetch(`https://smartech-production-1020.up.railway.app/api/allUser/${status}`)
     .then(response => response.json())
     .then(data => {
       console.log('Fetched users:', data);
@@ -155,7 +155,7 @@ useEffect(() => {
 //Pending Formations
 useEffect(() => {
     let status = false;
-  fetch(`http://localhost:9000/api/GetAllFormations/${status}`)
+  fetch(`https://smartech-production-1020.up.railway.app/api/GetAllFormations/${status}`)
     .then(response => response.json())
     .then(data => {
       console.log('Fetched formations:', data);
@@ -174,7 +174,7 @@ useEffect(() => {
 //Approve Formations
 
 const approveCourse = (id) => {
-  fetch(`http://localhost:9000/api/approveformations/${id}`, {
+  fetch(`https://smartech-production-1020.up.railway.app/api/approveformations/${id}`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -220,7 +220,7 @@ const approveUser = (id) => {
       setAllcourse((prev)=> prev.filter((course)=>course.id !== id));
       if(localStorage.getItem("auth-token"))
         {
-          fetch(`http://localhost:9000/api/DeleteFormations/${id}`,{
+          fetch(`https://smartech-production-1020.up.railway.app/api/DeleteFormations/${id}`,{
             method:"DELETE",
             headers :{
                 Accept : 'application/json',
@@ -239,7 +239,7 @@ const approveUser = (id) => {
 
   useEffect(() => {
   // Fetch user distribution
-  fetch('http://localhost:9000/api/user-distribution')
+  fetch('https://smartech-production-1020.up.railway.app/api/user-distribution')
     .then(res => res.json())
     .then(data => {
       setChartData(prev => ({
@@ -253,7 +253,7 @@ const approveUser = (id) => {
     });
 
   // Fetch course enrollments
-  fetch('http://localhost:9000/api/course-enrollments')
+  fetch('https://smartech-production-1020.up.railway.app/api/course-enrollments')
     .then(res => res.json())
     .then(data => {
       setChartData(prev => ({
