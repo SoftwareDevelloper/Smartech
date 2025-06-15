@@ -21,7 +21,7 @@ const Home = () => {
 
 
       useEffect(() => {
-        fetch(`http://localhost:9000/event/GetEvent?lang=${currentLanguage}`)
+        fetch(`https://smartech-production-1020.up.railway.app/event/GetEvent?lang=${currentLanguage}`)
           .then(response => response.json())
           .then(data => {
             console.log('Fetched course:', data);
