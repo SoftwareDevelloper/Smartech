@@ -19,7 +19,7 @@ const Profile = () => {
       const decodedToken = jwtDecode(token);
       const userId = decodedToken.sub;
 
-      fetch(`http://localhost:9000/api/user/${userId}`)
+      fetch(`https://smartech-production-1020.up.railway.app/api/user/${userId}`)
         .then((response) => response.json())
         .then((data) => {
           console.log('User fetched:', data);
