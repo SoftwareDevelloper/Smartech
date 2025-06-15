@@ -27,7 +27,7 @@ function TwoFAComponent() {
       return;
     }
     setIsLoading(true);
-    await fetch('http://localhost:9000/api/2fa/send-otp', {
+    await fetch('https://smartech-production-1020.up.railway.app/api/2fa/send-otp', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ phone })
@@ -38,7 +38,7 @@ function TwoFAComponent() {
   
   const verifyOtp = async () => {
     const otpCode = otp.join('');
-    const res = await fetch('http://localhost:9000/api/2fa/verify-otp', {
+    const res = await fetch('https://smartech-production-1020.up.railway.app/api/2fa/verify-otp', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ phone, otp: otpCode })
