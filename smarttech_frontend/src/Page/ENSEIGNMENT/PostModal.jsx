@@ -36,7 +36,7 @@ const PostModal = ({ closeModal }) => {
       const formData = new FormData();
       formData.append('file', imageFile);
 
-      const uploadResponse = await fetch('http://localhost:9000/api/upload-post_image', {
+      const uploadResponse = await fetch('https://smartech-production-1020.up.railway.app/api/upload-post_image', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('auth-token')}`
@@ -49,7 +49,7 @@ const PostModal = ({ closeModal }) => {
 
       // Create post entry
       const postData = { image: imageUrl, content };
-      const createResponse = await fetch(`http://localhost:9000/api/uploadPost/${teacherId}`, {
+      const createResponse = await fetch(`https://smartech-production-1020.up.railway.app/api/uploadPost/${teacherId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
