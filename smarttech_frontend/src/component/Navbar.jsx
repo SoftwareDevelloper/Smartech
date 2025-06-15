@@ -39,7 +39,7 @@ const Navbar = ({isLoggedIn,role}) => {
     
     const fetchNotifications = async () => {
       try {
-        const response = await axios.get("http://localhost:9000/notifications/unread", {
+        const response = await axios.get("https://smartech-production-1020.up.railway.app/notifications/unread", {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem("auth-token")}`
           }
@@ -75,7 +75,7 @@ const Navbar = ({isLoggedIn,role}) => {
   const MarkAllRead = async () => {
     try {
       await axios.post(
-        "http://localhost:9000/notifications/markAsRead",
+        "https://smartech-production-1020.up.railway.app/notifications/markAsRead",
         {},
         {
           headers: {
@@ -106,7 +106,7 @@ const navbarBgColor = role === "ADMIN" || role=== "ENSEIGNMENT" ? "bg-white  dar
 
   const [event,setevent]=useState([]);
   useEffect(()=>{
-    fetch("http://localhost:9000/event/GetEvent")
+    fetch("https://smartech-production-1020.up.railway.app/event/GetEvent")
     .then(response => response.json())
     .then(data => {
       console.log('Fetched course:', data);
@@ -126,7 +126,7 @@ const navbarBgColor = role === "ADMIN" || role=== "ENSEIGNMENT" ? "bg-white  dar
     const [allcourse, setAllcourse]=useState([]);
 
      useEffect(() => {
-          fetch(`http://localhost:9000/api/GetFormations?lang=${currentLanguage}`)
+          fetch(`https://smartech-production-1020.up.railway.app/api/GetFormations?lang=${currentLanguage}`)
             .then(response => response.json())
             .then(data => {
               console.log('Fetched course:', data);
@@ -150,7 +150,7 @@ const navbarBgColor = role === "ADMIN" || role=== "ENSEIGNMENT" ? "bg-white  dar
           if (token) {
             const decodedToken = jwtDecode(token);
             const adminId = decodedToken.sub;
-          fetch(`http://localhost:9000/api/user/${adminId}`)
+          fetch(`https://smartech-production-1020.up.railway.app/api/user/${adminId}`)
             .then((response) => response.json())
             .then((data) => {
               setUser(data);
@@ -174,7 +174,7 @@ const navbarBgColor = role === "ADMIN" || role=== "ENSEIGNMENT" ? "bg-white  dar
         const decodedToken = jwtDecode(token);
         const id = decodedToken.sub;
         
-        const response = await fetch(`http://localhost:9000/api/updateActive/${id}`, {
+        const response = await fetch(`https://smartech-production-1020.up.railway.app/api/updateActive/${id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
