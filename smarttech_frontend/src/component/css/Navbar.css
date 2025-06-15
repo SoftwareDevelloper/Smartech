@@ -1,0 +1,45 @@
+.btn_Login{
+    width: 140px;
+    height: 40px;
+    background-color: #036195;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9%;
+    font-weight: 500;
+    font-size: 18px;
+
+}
+
+/* Dark mode styles */
+.dark .dark-bg {
+    background-color: #001533; /* bg-gray-800 */
+  }
+  
+  .dark .dark-text {
+    color: #c9d7f7; /* text-gray-100 */
+  }
+  
+  .dark .dark-border {
+    border-color: #001533; /* border-gray-700 */
+  }
+  
+  .dark .dark-hover:hover {
+    background-color: #fdc401;
+    border-radius: 25px;
+    width: 150px;
+    height: 35px;
+    /* hover:bg-gray-700 */
+  }
+  .dark .dark-modal {
+    background-color: #111827; /* bg-gray-900 */
+    border: 1px solid #374151;
+  }
+  
+  /* Inversion des images */
+  .dark .dark-invert {
+    filter: invert(1) brightness(0.8);
+  }
+

@@ -1,0 +1,27 @@
+/* Footer Dark Mode */
+.dark-footer {
+  background-color: #001533!important;
+  color: #e2e8f0 !important;
+}
+
+.dark-footer .text-gray-500 {
+  color: #a0aec0 !important;
+}
+
+.dark-footer a {
+  color: #cbd5e0 !important;
+}
+
+.dark-footer a:hover {
+  color: white !important;
+  text-decoration: underline !important;
+}
+
+.dark-footer-img {
+  filter: invert(0.8) brightness(1.2);
+}
+
+/* Transition douce */
+footer, footer * {
+  transition: background-color 0.3s ease, color 0.3s ease, filter 0.3s ease;
+}

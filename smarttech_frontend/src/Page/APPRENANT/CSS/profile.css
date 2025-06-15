@@ -1,0 +1,13 @@
+.profile{
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../assest/background7.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    font-Family:"Montserrat", sans-serif;
+    border-radius: 25px;
+    margin-top: 2%;
+    height: 100vh;
+}
+

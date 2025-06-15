@@ -1,0 +1,117 @@
+.containers {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    padding: 20px;
+    font-family: "Montserrat", sans-serif;
+  }
+  .info_primaire{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .img_ens {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #03619f;
+  }
+  
+  .fullname_ens {
+    font-size: 15px;
+    font-weight: 600;
+    color: #03619f;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }  
+  
+  .followAndPost {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .folowers, .Posts {
+    font-weight: 500;
+    color: #03619f;
+  }
+  
+  .ens_bio {
+    margin: 2rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+  }
+  .speciality{
+    margin: 2rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .aboutEnsh2, .contactInfoh2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fdc401;
+    margin-bottom: 0.5rem;
+  }
+  
+  .bioP, .emailsp, .telephonep {
+    color: #a8a8a8;
+    font-size: 14px;
+  }
+  
+  .drawers {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    border-top: 1px solid #eaeaea;
+  }
+  
+  
+  .tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #848484;
+    font-weight: 500;
+    border-top: 2px solid transparent;
+  }
+  
+  
+  .active-tab {
+    color: #b0b0b0;
+    border-top-color: #cdcdcd;
+  }
+  
+  .posts-grid {
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #efefef;
+    margin-top: 1rem;
+  }
+  
+  .upload {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.2s;
+  }
+  
+  .upload:hover {
+    transform: scale(1.1);
+  }
+  .upload img {
+    width: 30px; /* Set specific size */
+    height: 30px; /* Set specific size */
+    filter: invert(56%) sepia(98%) saturate(310%) hue-rotate(160deg) brightness(93%) contrast(101%);
+    transition: all 0.2s ease;
+  }

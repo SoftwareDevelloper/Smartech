@@ -1,0 +1,228 @@
+.CoursManage{
+    display: flex;
+    flex-direction: column;
+}
+.add_forms{
+    display: flex;
+    flex-direction: column;
+}
+.label_input_add{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    width: 300px;
+}
+.label_input_add_titre{
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 400px;
+    gap: 10px;
+}
+.label_input_add_description{
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 400px;
+    gap: 10px;
+}
+.label_input_add_price{
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 400px;
+    gap: 10px;
+}
+.label_input_add_others{
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 400px;
+    gap: 10px;
+}
+.label_input_add_date{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 700px;
+}
+.label_input_add_date input{
+    border-radius: 10px;
+    background-color: #cee2f542;
+    border: none;
+    outline: none;
+    color: #000;
+}
+.label_input_add_date label{
+    color: #000;
+    font-size: 14px;
+    margin-left:1%;
+}
+.label_input_add_titre input{
+    border-radius: 10px;
+    background-color: #65b0fc42;
+    border: none;
+    outline: none;
+    color: #000;
+}
+.label_input_add input{
+    border-radius: 10px;
+    background-color: #65b0fc42;
+    border: none;
+    outline: none;
+    color: #000;
+}
+.label_input_add label{
+    color: #000;
+    font-size: 14px;
+    margin-left:1%;
+}
+.btn-send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-right: 28%;
+}
+.btn_send{
+    border: 2px solid rgb(0, 31, 122);
+    outline: none;
+    background-color:transparent;
+    padding: 12px 35px;
+    color: rgb(0, 31,122);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.01rem;
+}
+
+.add_forms h1{
+    font-size: 25px;
+    color: #0080ff;
+    font-weight: 600;
+    margin-left: 5%;
+}
+
+.add_forms hr{
+    width: 100px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: #0080ff;
+    border: none;
+    outline: none;
+    margin-left: 5%;   
+}
+
+.profil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: none;
+    width: 500px;
+    margin-left: 25%;
+    height: 600px;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    
+}
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.info .profileimg{
+    width: 200px;
+    cursor:pointer;
+}
+.infos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+.info input{
+    border-radius: 25px;
+    background-color: rgba(228, 228, 228, 0.277);
+    color: rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 250px;
+    font-size: 15px;
+
+
+}
+
+.deconnectdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.deconnect{
+    width: 140px;
+    height: 45px;
+    border: none;
+    outline:none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+    cursor:pointer;
+}
+
+.update_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height:450px;
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    gap: 20px;
+    
+}
+.update_form h1{
+    font-size: 25px;
+    color: #000000;
+    font-weight: 600;
+
+}
+.update_form hr{
+    width: 180px;
+    height: 8px;
+    background-color: rgb(128, 128, 128);
+    border-radius: 25px;
+    border: none;
+    outline: none;
+}
+.update_form .input_label{
+    display: flex;
+    justify-content: left;
+    align-items:start;
+    flex-direction: column;
+    gap: 10px;
+}
+.update_form .input_label input{
+    border: none;
+    outline: none;
+    background-color: rgb(231, 230, 230);
+    border-radius: 25px;
+    font-size: 12px;
+    width: 350px;
+}
+.update_btn{
+    width: 120px;
+    height: 45px;
+    border: 2px solid black;
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+}

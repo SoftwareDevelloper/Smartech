@@ -1,0 +1,193 @@
+.mycourse {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    padding: 40px 20px;
+}
+
+.mycourseH1Motion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    z-index: 2;
+    background: linear-gradient(to bottom, #ffffff, #03619fb3);
+    color: #03619f;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 30%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%);
+    margin-top: 2%;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-shadow: 1px 1px #03619f;
+}
+/* optional custom class */
+.badge-completed {
+  display: inline-flex;
+  align-items: center;
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.containermycourseH1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: scrollEvent 20s linear infinite;
+    width: 100%; 
+    position: relative;
+    overflow: hidden; 
+    background: linear-gradient(to bottom, #ffffff, #b5ddf8);
+    margin: 2% 0;
+
+}
+.mycourseH1{
+  background: linear-gradient(to bottom, transparent 0%, #03619f 40%);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto 40px;
+  position: relative;
+  padding-bottom: 15px;
+}
+.mycourseH1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #fdc401, #03619f);
+    border-radius: 2px;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+    max-width:1300px; 
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.MycoursesSubs {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    height: 100%; /* Ensures consistent height */
+}
+
+.MycoursesSubs:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.MycoursesSubs img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.infoCourse {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 200px); /* Adjust based on image height */
+}
+
+.infoCourse h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color:#03619f;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.infoCourse hr {
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #ffa200, #03619f);
+    border: none;
+    margin: 0 0 15px 0;
+}
+
+.infoCourse p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Pushes button to bottom */
+}
+
+.course-link {
+    display: inline-block;
+    padding: 10px 10px;
+    background: #03619f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+.course-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 17px;
+    width: 250px;
+    height: 40px;
+    background: #03619f;
+    color: white;
+    transition: all 0.3s ease;
+}
+.badgeComplete{
+    margin-left: 50%;
+    margin-top: 3%;
+}
+.course-link:hover {
+    background: #024b7a;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .courses-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .mycourseH1 {
+        font-size: 2.2rem;
+    }
+}

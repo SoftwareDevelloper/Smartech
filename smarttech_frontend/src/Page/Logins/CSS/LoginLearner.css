@@ -1,0 +1,119 @@
+.apprenantLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+}
+.apprenantLogin .login_apprenant_form{
+    border: 2px solid white;
+    background-color: rgb(255, 255, 255);
+    width: 550px;
+    height: 550px;
+    
+}
+.apprenantLogin .login_apprenant_form h1{
+    font-size: 35px;
+    font-weight: 600;
+    color: #036195;
+    text-align:center;
+    margin-top: 13%;
+    
+
+}
+.apprenantLogin .login_apprenant_form hr{
+    width: 120px;
+    height: 9px;
+    border-radius: 50px;
+    background-color: #036195;
+    border: none;
+    outline: none;
+    margin-left: 22%;
+}
+.apprenantLogin .login_apprenant_form input{
+    font-size: 15px;
+    margin-top: 5%;
+    width: 300px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    color: #036195;
+    background-color: #0362950e;
+}
+.apprenantLogin .login_apprenant_form input:focus{
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(201, 187, 189, 0.178);
+    outline: rgb(255, 255, 255);
+}
+.login_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.apprenantLogin .login_apprenant_form .login_apprenant{
+    font-size: 17px;
+    width: 130px;
+   height: 42px;
+   border-radius: 25px;
+   border: 2px solid #036195; 
+   background-color:transparent;
+   color: #036195;
+   margin-top: 8%;
+   font-weight: 500;
+   letter-spacing: 1px;
+
+}
+
+.email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Password {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Password input {
+    font-size: 15px;
+    margin-top: 5%;
+    width: 300px;
+    padding-right: 40px; /* Add padding to make space for the eye icon */
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    color: #036195;
+    background-color: #0362950e;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 25%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #036195;
+    cursor: pointer;
+    margin-top: 5%;
+}
+.confirm{
+    color: #fdc401;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 5%;
+}
+.confirm .signUpLink{
+    color: #fdc401;
+    font-size: 16px;
+    font-weight: 600;
+}
+.confirm .signUpLink:hover{
+    text-decoration: underline;
+}
+/* Custom Toast Style */
+.Toastify__toast {
+    width: 350px !important; 
+    max-width: 100% !important; 
+  }
+  

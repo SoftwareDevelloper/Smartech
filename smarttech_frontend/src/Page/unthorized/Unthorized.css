@@ -1,0 +1,8 @@
+.Unthorized{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Unthorized img{
+    width: 50%;
+}

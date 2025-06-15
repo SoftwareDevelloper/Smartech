@@ -1,0 +1,134 @@
+@media(max-width:1286px){
+    .about-section{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin-top: 5%;
+    }
+    .about{
+        width: 250px;
+        height: 200px;
+    }
+    #allcards{
+        margin-top:2%;        
+    }
+    #titleh2{
+        margin-top: 2%;
+        font-size: 18px;
+    }
+    #cardsp{
+        font-size: 22px;
+    }
+    #carddsss{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+   
+
+}
+
+
+@media(max-width:1240px){
+  
+    #allcards{
+        margin-top:8%;        
+    }
+    #titleh2{
+        font-size: 18px;
+    }
+    #cardsp{
+        font-size: 20px;
+    }
+    #carddsss{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+  
+
+}
+
+
+@media(max-width:796px){
+  
+    #allcards{
+        margin-top:25%;        
+    }
+    #titleh2{
+        font-size: 18px;
+    }
+    #cardsp{
+        font-size: 20px;
+    }
+    #carddsss{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+  
+
+}
+
+
+@media(max-width:638.40px){
+  
+    #allcards{
+        margin-top:160%;        
+    }
+    #titleh2{
+        font-size: 18px;
+    }
+    #cardsp{
+        font-size: 20px;
+    }
+    #carddsss{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+  
+
+}
+
+
+/* Dark Mode Styles */
+.dark-bg {
+    background-color: white;
+}
+
+.dark .dark-bg {
+    background-color: #001533;
+}
+
+.dark-text {
+    color: inherit;
+}
+
+.dark .dark-text {
+    color: #c9d7f7;
+}
+
+.dark .dark-text-secondary {
+    color: #a8b6d1;
+}
+
+.dark-card {
+    background-color: #002147;
+    border: 1px solid #003366;
+}
+
+.dark-icon {
+    filter: invert(1) brightness(1.5);
+}
+
+/* Transition douce */
+.about-section, .dark-bg, .dark-text, .dark-text-secondary, .dark-card {
+    transition: background-color 0.5s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cartes en mode sombre */
+.dark #carddsss > div {
+    box-shadow: 10px 5px 6px #001a3d !important;
+}
+
+/* Titre principal en mode sombre */
+.dark #cardsp {
+    color: #7db8ff !important;
+}
+

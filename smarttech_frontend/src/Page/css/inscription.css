@@ -1,0 +1,190 @@
+.Inscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30vh;
+    margin-top:3%;
+    font-family: "Montserrat", sans-serif;
+}
+
+.Inscription h1 {
+    font-weight: 600;
+    font-size: 32px;
+    color: #ffbf00;
+}
+
+.Inscription hr {
+    width: 135px;
+    height: 10px;
+    border-radius: 25px;
+    background-color: #ffbf00;
+    border: none;
+}
+
+.input {
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    flex-direction: column;
+    position: relative;
+}
+
+.Inscription form {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.input label {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(80, 79, 79);
+    margin-left: 2%;
+}
+
+.input input {
+    width: 350px;
+    height: 50px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px rgb(175, 175, 175);
+    color: rgb(115, 115, 115);
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 40px; /* Add padding to make space for the icon */
+}
+
+.input select {
+    width: 350px;
+    height: 50px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px rgb(175, 175, 175);
+    color: rgb(115, 115, 115);
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 40px; /* Add padding to make space for the icon */
+}
+
+.input img {
+    position: absolute; /* Position the icon absolutely within the input container */
+    left: 10px; /* Adjust the position of the icon */
+    top: 50%; /* Center the icon vertically */
+    transform: translateY(-50%); /* Center the icon vertically */
+    width: 18px;
+    height: 18px;
+}
+
+
+.price-input-container {
+    position: relative; /* Create a positioning context for the currency symbol */
+    width: 350px; /* Match the width of the input */
+  }
+  
+  .price {
+    width: 100%; /* Make the input take up the full width of its container */
+    height: 50px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px rgb(175, 175, 175);
+    color: rgb(115, 115, 115);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 40px; /* Add padding to make space for the currency symbol */
+  }
+  
+  .currency-symbol {
+    position: absolute; /* Position the symbol inside the input */
+    left: 60px; /* Adjust the position of the symbol */
+    top: 50%; /* Center the symbol vertically */
+    transform: translateY(-50%); /* Center the symbol vertically */
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(115, 115, 115);
+    pointer-events: none; /* Ensure the symbol doesn't interfere with input clicks */
+  }
+  /* CardPayment.css */
+.payment_forms{
+    display: flex;
+    flex-direction: column;
+}
+.cards_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+}
+.payment_forms{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    margin-top: 2%;
+    
+}
+.payment_forms input{
+    width: 350px;
+    height: 50px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px rgb(175, 175, 175);
+    color: rgb(115, 115, 115);
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+}
+.payment_forms select{
+    width: 350px;
+    height: 50px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px rgb(175, 175, 175);
+    color: rgb(115, 115, 115);
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+}
+.payment_forms label{
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(80, 79, 79);
+    margin-left: 2%;
+}
+
+.btn_pay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffbf00;
+    border: none;
+    outline: none;
+    width: 350px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 1%;
+    margin-top: 5%;
+    color: #ffffff;
+    cursor: pointer;
+}
+.btn_submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    width: 350px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 1%;
+    margin-top: 5%;
+    color: #000000;
+    cursor: pointer;
+    border: 2px solid #ffbf00;
+    color: #ffbf00;
+}

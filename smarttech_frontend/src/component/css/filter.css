@@ -1,0 +1,17 @@
+.NoCourseFilter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family:"Montserrat", sans-serif;
+}
+.NoCourseFilter .span{
+    font-size: 23px;
+    color:#03619f;
+    font-weight: 500;
+}
+.NoCourseFilter .span2{
+    font-size: 25px;
+    color:#fdc401;
+    font-weight: 500;
+}

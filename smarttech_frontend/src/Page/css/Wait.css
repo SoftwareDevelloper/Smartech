@@ -1,0 +1,46 @@
+.Wait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .approval-message {
+    text-align:center;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 580px;
+    width: 100%;
+  }
+  
+  .papprove {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #007bff;
+  }
+  
+  .loading-spinner {
+    margin: 1.5rem 0;
+  }
+  
+
+  
+  .login-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .login-link a {
+    color: #007bff;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+    font-weight: 600;
+  }

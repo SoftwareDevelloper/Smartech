@@ -1,0 +1,280 @@
+.section-teacher{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8%;
+}
+.containers_teachers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 320px;
+}
+
+.containers_teachers:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+.teacher_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+.teachers_fullname_p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #03619f;
+    text-align: center;
+    margin-top: 10px;
+}
+.teachers_image {
+    margin-bottom: 1rem;
+}
+.teachers_image img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fdc401;
+    transition: transform 0.3s ease;
+  }
+
+  .containers_teachers:hover .teachers_image img {
+    transform: scale(1.05);
+  }
+  .teacher_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .teachers_name {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #03619f;
+    margin-bottom: 0.5rem;
+  }
+  
+  .teacher-bio {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+
+.teachers_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.view-profile-btn {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.25rem 0;
+    text-decoration: underline;
+  }
+  
+  .view-profile-btn:hover {
+    color: #03619f;
+    transform: scale(1.05);
+  }
+
+  .teachers-swiper-wrapper {
+    width: 20%;
+    padding: 1rem 0;
+  }
+  
+  .teachers-swiper {
+    padding: 1rem;
+  }
+  
+
+
+@media(max-width:1286px){
+    .section-teacher{
+        margin-top: 6%;
+        padding: 3rem 1rem;
+    }
+}
+
+@media(max-width:1024px){
+    .section-teacher{
+        margin-top: 8%;
+
+    }
+    .section-subtitle {
+        font-size: 1.5rem;
+      }
+      
+      .containers_teachers {
+        padding: 1.25rem;
+      }
+}
+
+@media(max-width:1006.40px){
+    .section-teacher{
+        margin-top: 10%;
+
+    }
+    .section-subtitle {
+        font-size: 1.5rem;
+      }
+      
+      .containers_teachers {
+        padding: 1.25rem;
+      }
+}
+
+
+@media(max-width:1000px){
+    .section-teacher{
+        margin-top: 20%;
+
+    }
+    .section-subtitle {
+        font-size: 1.5rem;
+      }
+      
+      .containers_teachers {
+        padding: 1.25rem;
+      }
+}
+
+@media(max-width:878.40px){
+    .section-teacher{
+        margin-top: 27%;
+
+    }
+    .section-subtitle {
+        font-size: 1.5rem;
+      }
+      
+      .containers_teachers {
+        padding: 1.25rem;
+      }
+}
+@media(max-width:793.60px){
+    .section-teacher{
+        margin-top: 32%;
+
+    }
+    .section-subtitle {
+        font-size: 1.5rem;
+      }
+      
+      .containers_teachers {
+        padding: 1.25rem;
+      }
+}
+@media(max-width:778.40px){
+    .section-teacher{
+        margin-top: 40%;
+
+    }
+    .section-subtitle {
+        font-size: 1.5rem;
+      }
+      
+      .containers_teachers {
+        padding: 1.25rem;
+      }
+}
+@media(max-width:667.20px){
+    .section-teacher{
+        margin-top: 50%;
+
+    }
+    .section-subtitle {
+        font-size: 1.5rem;
+      }
+      
+      .containers_teachers {
+        padding: 1.25rem;
+      }
+}
+@media(max-width:639.20px){
+    .section-teacher{
+        margin-top: 70%;
+
+    }
+    .section-subtitle {
+        font-size: 1.5rem;
+      }
+      
+      .containers_teachers {
+        padding: 1.25rem;
+      }
+}
+@media(max-width:551.20px){
+    .section-teacher{
+        margin-top: 70%;
+
+    }
+    .section-subtitle {
+        font-size: 10px;
+      }
+      
+      .containers_teachers {
+        padding: 1.25rem;
+      }
+}
+
+
+
+
+/* Dark Mode Styles */
+.dark .dark-bg {
+  background-color: #001533; /* bg-gray-800 */
+}
+
+.dark .dark-text {
+  color: #c9d7f7; /* text-gray-100 */
+}
+
+.dark .dark-border {
+  border-color: #001533; /* border-gray-700 */
+}
+
+.dark .dark-hover:hover {
+  background-color: #fdc401;
+  border-radius: 25px;
+  width: 150px;
+  height: 35px;
+}
+
+.dark .dark-modal {
+  background-color: #111827; /* bg-gray-900 */
+  border: 1px solid #374151;
+}
+
+/* Inversion des images */
+.dark .dark-invert {
+  filter: invert(1) brightness(0.8);
+}

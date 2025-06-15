@@ -1,0 +1,88 @@
+.heroCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: linear-gradient(360deg,#78d9ff,#ffffff);
+    height: 500px;
+    flex-direction: column;
+}
+.heroCenter h1{
+    font-size: 125px;
+    background: linear-gradient(to right, #00374c,#ffffff); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+    letter-spacing: 0.5rem;
+    font-weight: 500;
+    font-style: bold;
+}
+.heroCenter .bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content:space-between;
+    text-align: justify;
+    
+}
+
+.bottomprivacy {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 50px;
+    background: linear-gradient(360deg,#ffffff,#78d9ff);
+    gap: 10px;
+  }
+  
+  .bottom h2 {
+    color:#003968;
+    font-size:25px;
+    font-weight: 600;
+  }
+  
+  .bottom h3 {
+    color:#003968;
+    font-size:25px;
+    font-weight: 600;
+  }
+  
+  .bottom p {
+    color:#05599e;
+    font-size:17px;
+    font-weight: 600;
+  }
+  
+  .bottom ul {
+    list-style-type: none;
+  }
+  
+  .bottom li {
+    color:#05599e;
+    font-size:17px;
+    font-weight: 600;
+  }
+  
+  .bottom strong {
+    font-weight: 600;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .bottom {
+      padding: 1rem;
+    }
+  
+    .bottom h2 {
+      font-size: 1.75rem;
+    }
+  
+    .bottom h3 {
+      font-size: 1.25rem;
+    }
+  
+    .bottom p,
+    .bottom li {
+      font-size: 0.9rem;
+    }
+  }

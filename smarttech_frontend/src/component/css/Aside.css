@@ -1,0 +1,102 @@
+/* Drawer.css */
+.drawer {
+  padding: 20px;
+  font-family:"Montserrat", sans-serif;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 20px;
+}
+
+.drawer .course,
+.drawer .deconnexion,
+.drawer .settings {
+  display: flex;
+  align-items: center;
+  width: 200%;
+  padding: 15px 40px;
+  margin: 8px 0;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.drawer .course:hover,
+.drawer .deconnexion:hover,
+.drawer .settings:hover {
+  background: rgba(99, 102, 241, 0.1);
+  transform: translateX(5px);
+}
+
+.drawer img {
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+}
+
+
+/* Modal Styling */
+#popup-modal {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+#popup-modal .relative {
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+#popup-modal .text-blue-500 {
+  color: #6366f1;
+}
+
+#popup-modal button[data-modal-hide] {
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#popup-modal button.bg-red-600 {
+  background: #ef4444;
+}
+
+#popup-modal button.bg-red-600:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+#popup-modal button.border-blue-600 {
+  border: 2px solid #6366f1;
+  color: #6366f1;
+}
+
+#popup-modal button.border-blue-600:hover {
+  background: rgba(99, 102, 241, 0.1);
+}
+
+@media (max-width: 768px) {
+  .drawer {
+    width: 100%;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 12px;
+  }
+  
+  .drawer .course,
+  .drawer .deconnexion,
+  .drawer .settings {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+}

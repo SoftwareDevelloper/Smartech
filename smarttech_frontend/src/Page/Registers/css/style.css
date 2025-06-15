@@ -1,0 +1,230 @@
+.SignUp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.SignUp .Sign_form{
+    border: 2px solid white;
+    background-color: rgb(255, 255, 255);
+    width: 550px;
+    height: 550px;
+}
+.SignUp .Sign_form h1{
+    font-size: 35px;
+    font-weight: 600;
+    color: #036195;
+    text-align:center;
+    margin-top: 5%;
+   
+}
+.SignUp .Sign_form hr{
+    width: 120px;
+    height: 9px;
+    border-radius: 50px;
+    background-color: rgba(108, 117, 247);
+    border: none;
+    outline: none;
+   
+}
+.SignUp .Sign_form input {
+    font-size: 15px;
+    margin-top: 5%;
+    width: 300px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    color: #036195;
+    background-color:#0362950e;
+}
+.SignUp .Sign_form select {
+    font-size: 15px;
+    margin-top: 5%;
+    width: 300px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    color: #036195;
+    background-color:#0362950e;
+}
+.SignUp .Sign_form input:focus{
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(201, 187, 189, 0.178);
+    outline: rgb(255, 255, 255);
+}
+.SignUp .Sign_form select:focus{
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(201, 187, 189, 0.178);
+    outline: rgb(255, 255, 255);
+}
+.username{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fullname{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.emailadress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Password {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Password input {
+    font-size: 15px;
+    margin-top: 5%;
+    width: 300px;
+    padding-right: 40px; /* Add padding to make space for the eye icon */
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    color: #036195;
+    background-color: #0362950e;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 25%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #036195;
+    cursor: pointer;
+    margin-top: 5%;
+}
+.niveau{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phone-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+}
+.cle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Role{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-sign .signIn_btn{
+    font-size: 17px;
+    width: 130px;
+   height: 42px;
+   border-radius: 25px;
+   border: 2px solid #036195; 
+   background-color:transparent;
+   color: #036195;
+   margin-top: 8%;
+   font-weight: 500;
+   letter-spacing: 1px;
+}
+
+.pSign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+}
+.pSign .p{
+    color: #fdc401;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 5%;
+}
+.pSign .p .login{
+    color: #fdc401;
+    font-size: 16px;
+    font-weight: 600;
+}
+.pSign .p .login:hover{
+    text-decoration: underline;
+
+}
+.phone-input-container {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.phone-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown-button-inside {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: 0 8px;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.phone-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.country-dropdown-wrapper {
+  position: relative;
+}
+
+.country-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  width: max-content;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.country-option {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.country-option:hover {
+  background-color: #f0f0f0;
+}
+

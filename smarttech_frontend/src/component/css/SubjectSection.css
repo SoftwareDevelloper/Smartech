@@ -1,0 +1,153 @@
+@media(max-width:1286px){
+
+    #Sections{
+        margin-top:2%;        
+    }
+    #titleSection{
+        margin-top: 2%;
+        font-size: 18px;
+    }
+    #titleSlogan{
+        font-size: 22px;
+    }
+    #Cards{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media(max-width:1196px){
+    #Sections{
+        margin-top:10%;        
+    }
+    #titleSection{
+        font-size: 17px;
+    }
+    #titleSlogan{
+        font-size: 20px;
+    }
+    #Cards{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+}
+
+
+@media(max-width:1114px){
+    #Sections{
+        margin-top:10%;        
+    }
+    #titleSection{
+        font-size: 17px;
+    }
+    #titleSlogan{
+        font-size: 20px;
+    }
+    #Cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+
+@media(max-width:1000px){
+    #Sections{
+        margin-top:55%;        
+    }
+    #titleSection{
+        font-size: 17px;
+    }
+    #titleSlogan{
+        font-size: 20px;
+    }
+    #Cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+
+
+
+@media(max-width:807.20px){
+    #Sections{
+        margin-top:65%;        
+    }
+    #titleSection{
+        font-size: 17px;
+    }
+    #titleSlogan{
+        font-size: 20px;
+    }
+    #Cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:784px){
+    #Sections{
+        margin-top:88%;        
+    }
+    #titleSection{
+        font-size: 17px;
+    }
+    #titleSlogan{
+        font-size: 20px;
+    }
+    #Cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+
+
+@media(max-width:634px){
+    #Sections{
+       display: none;
+          
+    }
+  
+
+}
+
+
+/* Dark Mode Styles */
+.dark-bg {
+    background-color: white;
+  }
+  
+  .dark .dark-bg {
+    background-color: #001533;
+  }
+  
+  .dark-text {
+    color: inherit;
+  }
+  
+  .dark .dark-text {
+    color: #c9d7f7;
+  }
+  
+  .dark-card {
+    background-color: #002147;
+    border-color: #ffd700 !important;
+  }
+  
+  .dark .subject-card {
+    box-shadow: 5px 2px 2px #ffd700 !important;
+  }
+  
+  .dark #titleSlogan {
+    color: #7db8ff !important;
+  }
+  
+  /* Transition douce */
+  .subject-card, .dark-bg, .dark-text, #titleSlogan, #titleSection {
+    transition: background-color 0.5s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
