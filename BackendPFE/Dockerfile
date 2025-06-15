@@ -1,3 +1,4 @@
+# Stage 1: Build the application
 FROM openjdk:17-jdk AS build
 
 WORKDIR /app
@@ -5,6 +6,9 @@ WORKDIR /app
 COPY mvnw .
 COPY .mvn .mvn
 COPY pom.xml .
+
+# Add this line to give execute permissions to the mvnw script
+RUN chmod +x mvnw
 
 RUN ./mvnw dependency:go-offline -B
 
@@ -20,7 +24,3 @@ COPY --from=build /app/target/BackendPFE-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 9000
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
-
-
-
-
