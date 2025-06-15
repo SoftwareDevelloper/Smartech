@@ -36,7 +36,7 @@ const StripePaymentForm = ({ handlePayment, price }) => {
     const cardElement = elements.getElement(CardElement);
 
     try {
-      const response = await fetch('http://localhost:9000/api/v1/Checkout', {
+      const response = await fetch('https://smartech-production-1020.up.railway.app/api/v1/Checkout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ const Inscription = () => {
       return;
     }
 
-    fetch(`http://localhost:9000/api/GetFormationsById/${id}?lang=${currentLanguage}`)
+    fetch(`https://smartech-production-1020.up.railway.app/api/GetFormationsById/${id}?lang=${currentLanguage}`)
       .then((response) => response.json())
       .then((data) => {
         setCourse(data);
@@ -136,7 +136,7 @@ const Inscription = () => {
         apprenant_id = decodedToken.sub;
       }
 
-      const response = await fetch(`http://localhost:9000/api/inscrire/${apprenant_id}/${id}`, {
+      const response = await fetch(`https://smartech-production-1020.up.railway.app/api/inscrire/${apprenant_id}/${id}`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
