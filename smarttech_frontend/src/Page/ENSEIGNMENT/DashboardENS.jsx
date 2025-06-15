@@ -50,7 +50,7 @@ const DashboardENS = () => {
 
   const TotalLessons = async (enseignantId) => {
     try {
-      const response = await fetch(`http://localhost:9000/api/CountCourseENS/${enseignantId}`, {
+      const response = await fetch(`https://smartech-production-1020.up.railway.app/api/CountCourseENS/${enseignantId}`, {
         method: 'GET',
         headers: {
           Accept: 'application/json',
@@ -66,7 +66,7 @@ const DashboardENS = () => {
 
   const TotalStudent = async (enseignantId) => {
     try {
-      const response = await fetch(`http://localhost:9000/api/CountStudent/${enseignantId}`, {
+      const response = await fetch(`https://smartech-production-1020.up.railway.app/api/CountStudent/${enseignantId}`, {
         method: 'GET',
         headers: {
           Accept: 'application/json',
@@ -82,7 +82,7 @@ const DashboardENS = () => {
 
   const fetchCourses = async (enseignantId) => {
     try {
-      const response = await fetch(`http://localhost:9000/api/GetFormationsbyENS/${enseignantId}?lang=${currentLanguage}`);
+      const response = await fetch(`https://smartech-production-1020.up.railway.app/api/GetFormationsbyENS/${enseignantId}?lang=${currentLanguage}`);
       const data = await response.json();
       if (Array.isArray(data)) {
         setAllcourse(data);
@@ -97,7 +97,7 @@ const DashboardENS = () => {
 
   const TotalClass = async (enseignantId) => {
     try {
-      const response = await fetch(`http://localhost:9000/api/CountCourseENS/${enseignantId}`, {
+      const response = await fetch(`https://smartech-production-1020.up.railway.app/api/CountCourseENS/${enseignantId}`, {
         method: 'GET',
         headers: {
           Accept: 'application/json',
