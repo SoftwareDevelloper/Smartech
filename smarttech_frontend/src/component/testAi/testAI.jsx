@@ -35,7 +35,7 @@ function Test() {
     }, []);
 
     useEffect(() => {
-        fetch(`http://localhost:9000/questions/get/${id}?lang=${currentLanguage}`)
+        fetch(`https://smartech-production-1020.up.railway.app/questions/get/${id}?lang=${currentLanguage}`)
             .then(r => r.json())
             .then(data => {
                 if (Array.isArray(data)) {
@@ -59,7 +59,7 @@ function Test() {
                 try {
                     if (userId) {
                         console.log("Fetching proficiency for user:", userId);
-                        const res = await fetch(`http://localhost:9000/api/predictLevel/getProficiencyLevel/${userId}`);
+                        const res = await fetch(`https://smartech-production-1020.up.railway.app/api/predictLevel/getProficiencyLevel/${userId}`);
                         console.log("Response status:", res.status);
                         const data = await res.json();
                         console.log("Response data:", data);
@@ -95,7 +95,7 @@ function Test() {
         if (typeof selectedIndex === 'undefined') return;
 
         try {
-            const response = await fetch(`http://localhost:9000/questions/validate/${questionId}`, {
+            const response = await fetch(`https://smartech-production-1020.up.railway.app/questions/validate/${questionId}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ selectedIndex })
@@ -124,7 +124,7 @@ function Test() {
                 throw new Error('Please log in to save your proficiency level');
             }
 
-            const formationRes = await fetch(`http://localhost:9000/api/GetFormationsById/${id}`);
+            const formationRes = await fetch(`https://smartech-production-1020.up.railway.app/api/GetFormationsById/${id}`);
             const formation = await formationRes.json();
 
             if (!formation || !formation.level) {
@@ -149,7 +149,7 @@ function Test() {
                 }, { current: 0, max: 0 }).max
             };
 
-            const predictionRes = await fetch(`http://localhost:9000/api/predictLevel/makePrediction/${userId}`, {
+            const predictionRes = await fetch(`https://smartech-production-1020.up.railway.app/api/predictLevel/makePrediction/${userId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
