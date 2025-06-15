@@ -22,7 +22,7 @@ const Teachers = () => {
       const [Enseignant,setEnseignant] = useState([]);
 
             useEffect(() => {
-              fetch(`http://localhost:9000/api/enseignant?lang=${currentLanguage}`)
+              fetch(`https://smartech-production-1020.up.railway.app/api/enseignant?lang=${currentLanguage}`)
                 .then(response => response.json())
                 .then(data => {
                   console.log('Fetched Teachers:', data);
