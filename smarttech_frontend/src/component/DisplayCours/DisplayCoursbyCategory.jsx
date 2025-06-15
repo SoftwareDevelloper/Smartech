@@ -18,24 +18,24 @@ const DisplayCoursbyCategory = ({ category,levels,classe,minPrice,maxPrice}) => 
                     let data;
                     if (category) {
                         const response = await fetch(
-                            `http://localhost:9000/api/GetCourse/${category}?lang=${currentLanguage}`
+                            `https://smartech-production-1020.up.railway.app/api/GetCourse/${category}?lang=${currentLanguage}`
                         );
                         data = await response.json();
                     } else if (levels) {
                         const response = await fetch(
-                            `http://localhost:9000/api/GetCourseBylevel/${levels}?lang=${currentLanguage}`
+                            `https://smartech-production-1020.up.railway.app/api/GetCourseBylevel/${levels}?lang=${currentLanguage}`
                         );
                         data = await response.json();
                     } 
                     else if(classe){
                         const response = await fetch(
-                            `http://localhost:9000/api/GetCourseByCourseClass/${classe}?lang=${currentLanguage}`
+                            `https://smartech-production-1020.up.railway.app/api/GetCourseByCourseClass/${classe}?lang=${currentLanguage}`
                         );
                         data = await response.json();
                     }
                     else {
                         const response = await fetch(
-                            `http://localhost:9000/api/GetCourse?lang=${currentLanguage}`
+                            `https://smartech-production-1020.up.railway.app/api/GetCourse?lang=${currentLanguage}`
                         );
                         data = await response.json();
                     }
@@ -67,7 +67,7 @@ const DisplayCoursbyCategory = ({ category,levels,classe,minPrice,maxPrice}) => 
         
         
               useEffect(() => {
-                fetch(`http://localhost:9000/api/Top5Course?lang=${currentLanguage}`)
+                fetch(`https://smartech-production-1020.up.railway.app/api/Top5Course?lang=${currentLanguage}`)
                   .then(response => response.json())
                   .then(data => {
                     console.log('Fetched course:', data);
