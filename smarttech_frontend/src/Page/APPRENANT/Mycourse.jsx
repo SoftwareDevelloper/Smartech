@@ -23,7 +23,7 @@ const Mycourse = () => {
             userId = decodedToken.sub; 
           }
           
-            fetch(`http://localhost:9000/api/Mycourse/${userId}?lang=${currentLanguage}`)
+            fetch(`https://smartech-production-1020.up.railway.app/api/Mycourse/${userId}?lang=${currentLanguage}`)
             .then((response) => response.json())
             .then((data) => {
               console.log('my course fetched:', data);
