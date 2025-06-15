@@ -13,7 +13,7 @@ const Archive = () => {
  const currentLanguage = i18n.language;
  useEffect(() => {window.document.dir = i18n.dir();}, [currentLanguage]);   
   useEffect(() => {
-     fetch("http://localhost:9000/api/ArchiveUser")
+     fetch("https://smartech-production-1020.up.railway.app/api/ArchiveUser")
        .then(response => response.json())
        .then(data => {
          console.log('Fetched users:', data);
@@ -26,7 +26,7 @@ const Archive = () => {
    }, []);
 
      useEffect(() => {
-     fetch("http://localhost:9000/api/ArchivedFormations")
+     fetch("https://smartech-production-1020.up.railway.app/api/ArchivedFormations")
        .then(response => response.json())
        .then(data => {
          console.log('Fetched users:', data);
@@ -43,7 +43,7 @@ const Archive = () => {
    //Restore archive 
 
  const restoreUsers = (id) => {
-    fetch(`http://localhost:9000/api/RestoreUsers/${id}`, {
+    fetch(`https://smartech-production-1020.up.railway.app/api/RestoreUsers/${id}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ const Archive = () => {
 
 
   const restoreFormations = (id) => {
-    fetch(`http://localhost:9000/api/RestoreFormations/${id}`, {
+    fetch(`https://smartech-production-1020.up.railway.app/api/RestoreFormations/${id}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
