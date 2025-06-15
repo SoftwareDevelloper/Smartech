@@ -37,7 +37,7 @@ const Contact = () => {
         senderEmail: formData.senderEmail,
       };
   
-      const response = await fetch(`http://localhost:9000/contact/send/${encodeURIComponent(formData.senderEmail)}`, {
+      const response = await fetch(`https://smartech-production-1020.up.railway.app/contact/send/${encodeURIComponent(formData.senderEmail)}`, {
         method: "POST",
         headers: {
           Accept: "application/json",
