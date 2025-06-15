@@ -16,7 +16,7 @@ const IA = () => {
     useEffect(() => {
         const fetchFormations = async () => {
             try {
-                const response = await fetch('http://localhost:9000/api/GetAllFormations');
+                const response = await fetch('https://smartech-production-1020.up.railway.app/api/GetAllFormations');
                 const data = await response.json();
                 setFormations(data);
                 if (data.length > 0) {
@@ -37,7 +37,7 @@ const IA = () => {
                 setLoading(true);
                 try {
                     const response = await fetch(
-                        `http://localhost:9000/questions/get/${selectedFormationId}`
+                        `https://smartech-production-1020.up.railway.app/questions/get/${selectedFormationId}`
                     );
                     const data = await response.json();
                     console.log("Fetched questions:", data);
@@ -112,7 +112,7 @@ const IA = () => {
         e.preventDefault();
     
         try {
-            const response = await fetch('http://localhost:9000/questions/create', {
+            const response = await fetch('https://smartech-production-1020.up.railway.app/questions/create', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -147,7 +147,7 @@ const IA = () => {
     const deleteQuestion = async (id) => {
         if (window.confirm('Are you sure you want to delete this question?')) {
             try {
-                const response = await fetch(`http://localhost:9000/questions/delete/${id}`, {
+                const response = await fetch(`https://smartech-production-1020.up.railway.app/questions/delete/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',
