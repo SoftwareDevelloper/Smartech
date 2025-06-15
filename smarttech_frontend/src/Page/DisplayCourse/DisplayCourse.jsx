@@ -22,7 +22,7 @@ const DisplayCourse = () => {
             window.document.dir = i18n.dir();
           },[currentLanguage])
     useEffect(() => {
-        fetch(`http://localhost:9000/api/GetFormationsById/${id}?lang=${currentLanguage}`)
+        fetch(`https://smartech-production-1020.up.railway.app/api/GetFormationsById/${id}?lang=${currentLanguage}`)
             .then((response) => response.json())
             .then((data) => {
                 console.log(`Course fetched for ${id}:`, data);
@@ -34,7 +34,7 @@ const DisplayCourse = () => {
     }, [currentLanguage,id]);
     useEffect(() => {
         if (course.category) {
-          fetch(`http://localhost:9000/api/GetCourse/${course.category}?lang=${currentLanguage}`)
+          fetch(`https://smartech-production-1020.up.railway.app/api/GetCourse/${course.category}?lang=${currentLanguage}`)
             .then((response) => response.json())
             .then((data) => {
               console.log(`Related courses fetched for category ${course.category}:`, data);
@@ -49,7 +49,7 @@ const DisplayCourse = () => {
       }, [course]); 
       useEffect(() => {
         if (course && course.id) {
-            fetch(`http://localhost:9000/api/fullnameEns/${id}`)
+            fetch(`https://smartech-production-1020.up.railway.app/api/fullnameEns/${id}`)
                 .then((response) => response.json())
                 .then((data) => {
                     console.log(`Instructor name fetched for course ${id}:`, data);
