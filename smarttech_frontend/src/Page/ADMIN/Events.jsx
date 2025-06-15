@@ -28,7 +28,7 @@ const Events = () => {
 
   // Fetch events
   useEffect(() => {
-    fetch(`http://localhost:9000/event/GetEvent?lang=${currentLanguage}`)
+    fetch(`https://smartech-production-1020.up.railway.app/event/GetEvent?lang=${currentLanguage}`)
       .then(response => response.json())
       .then(data => {
         if (Array.isArray(data)) {
@@ -121,7 +121,7 @@ const Events = () => {
     }
     
     try {
-      const response = await fetch('http://localhost:9000/event/createEvent', {
+      const response = await fetch('https://smartech-production-1020.up.railway.app/event/createEvent', {
         method: "POST",
         headers: {
           Accept: 'application/json',
@@ -156,7 +156,7 @@ const Events = () => {
   const RemoveEvent = async(id) => {
     setEvent(prev => prev.filter(event => event.id !== id));
     if (localStorage.getItem("auth-token")) {
-      fetch(`http://localhost:9000/event/delete/${id}`, {
+      fetch(`https://smartech-production-1020.up.railway.app/event/delete/${id}`, {
         method: "DELETE",
         headers: {
           Accept: 'application/json',
