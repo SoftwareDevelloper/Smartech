@@ -91,7 +91,7 @@ const Cart = () => {
       const userId = decodedToken.sub;
 
       const response = await fetch(
-        `http://localhost:9000/api/v1/create-payment-intent?apprenantId=${userId}`,
+        `https://smartech-production-1020.up.railway.app/api/v1/create-payment-intent?apprenantId=${userId}`,
         {
           method: "POST",
           headers: {
