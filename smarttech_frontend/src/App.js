@@ -106,7 +106,7 @@ function App() {
       const recentMessages = messages.slice(Math.max(messages.length - maxMessages, 0));
   
       const response = await axios.post(
-        'http://localhost:9000/api/chat',
+        'https://smartech-production-1020.up.railway.app/api/chat',
         {
           model: 'gpt-4o-mini',
           messages: [
