@@ -21,7 +21,7 @@ const DisplayAllCours = () => {
             setIsLoading(true);
             try {
                 const response = await fetch(
-                    `http://localhost:9000/api/formations/paginated?lang=${currentLanguage}&page=${currentPage}&size=${itemsPerPage}&sortBy=publisheddate&direction=desc`
+                    `https://smartech-production-1020.up.railway.app/api/formations/paginated?lang=${currentLanguage}&page=${currentPage}&size=${itemsPerPage}&sortBy=publisheddate&direction=desc`
                 );
                 const data = await response.json();
                 
